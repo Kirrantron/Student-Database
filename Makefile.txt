@@ -1,0 +1,29 @@
+student: main.o add.o delete.o show.o modify.o sort.o reverse.o file.o
+	gcc main.o add.o delete.o show.o modify.o sort.o reverse.o file.o -o student
+
+main.o: main.c student.h
+	gcc -c main.c
+
+add.o: add.c student.h
+	gcc -c add.c
+
+delete.o: delete.c student.h
+	gcc -c delete.c
+
+show.o: show.c student.h
+	gcc -c show.c
+
+modify.o: modify.c student.h
+	gcc -c modify.c
+
+sort.o: sort.c student.h
+	gcc -c sort.c
+
+reverse.o: reverse.c student.h
+	gcc -c reverse.c
+
+file.o: file.c student.h
+	gcc -c file.c
+
+clean:
+	rm -f *.o student
